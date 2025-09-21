@@ -34,8 +34,8 @@ export async function batchAskMock(images: ImageItem[], prompt: string) {
   return Promise.all(tasks)
 }
 
-const apiKey = import.meta.env.OPENAI_API_KEY
-const model = import.meta.env.OPENAI_VISION_MODEL || "gpt-4o-mini"
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY
+const model = import.meta.env.VITE_OPENAI_VISION_MODEL || "gpt-4o-mini"
 
 let client: OpenAI | null = null
 if (apiKey) {
